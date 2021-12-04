@@ -7,11 +7,17 @@
   <body>
     <script>
       function main(input) {
-        var a = input.split(" "); // 入力
+        const args = input.split("\n");
+        const n = parseInt(args[0], 10);
+        const a = args[1].split(" ").map((n) => parseInt(n, 10));
 
-        if (i % 5 == 0) {
+        console.log(args); // [ '4', '2 1 4 8' ]
+        console.log(n); // 4
+        console.log(a); // [ 2, 1, 4, 8 ]
+
+        if (a % 5 == 0) {
           console.log("割り切れます");
-        } else if (i % 3 == 0) {
+        } else if (a % 3 == 0) {
           console.log("割り切れます");
         } else {
           console.log("割り切れません");
